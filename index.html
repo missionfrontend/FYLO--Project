@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fylo Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+   
+    <script>
+        if(localStorage.getItem('color-theme')==='dark' || (!('color-theme' in localStorage)) && window.matchMedia('(prefers-color-scheme:dark)').matches) {
+           document.documentElement.classList.add('dark')
+        }else{
+            document.documentElement.classList.remove('dark')
+        }
+
+        
+    </script>
+</head>
+<body class="dark:bg-dark-color dark:text-white font-opensans">
+    <header class="container mx-auto mt-10 p-6 text-center h-40 md:h-20">
+        <div class="bg-logo-light-mode dark:bg-logo-dark-mode bg-no-repeat h-20 w-48 mx-auto md:mx-0 md:absolute top-10 left-10"></div>
+        <div class="flex justify-center items-center space-x-4 md:space-x-10 md:absolute md:top-12 md:right-10">
+            <a href="#features" class="hover:text-cyan-400">Features</a>
+            <a href="#testimonial" class="hover:text-cyan-500">Testimonials</a>
+            <button id="theme-toggle" class="text-gray-500 dark:text-gray-400 hover:bg-gray100  dark:hover:bg-gray-700 outline-none focus:ring-4 focus:ring-gray-200  dark:focus:ring-gray-700 rounded-lg  text-sm p-2">
+                <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                 
+            </button>
+        </div>
+    </header>
+    <section id="hero" class="bg-curvy-light-mode dark:bg-curvy-dark-mode bg-no-repeat bg-contain bg-bottom">
+        <div class="container mx-auto px-6 text-center md:pt-20 pb-52">
+          <img src="images/illustration-intro.png" alt="" srcset="" class="mx-auto">
+          <h1 class="max-w-2xl mx-auto mb-10 text-3xl font-bold mt-14 md:text-4xl">All your files in one secure location, accessible anywhere.</h1>
+        <p class="max-w-sm mx-auto mb-10 text-sm md:max-w-xl md:text-lg">
+            Fylo stores all your files in one secure location.Access them wherever you need, share and collaborate with friends, family and co-workers.
+        </p>
+        <button class="w-52 rounded-full bg-cyan-300 hover:scale-95 duration-150 py-4 shadow-2xl font-semibold">Get Started</button>
+        </div>
+    </section>
+    <!-- Feature--section -->
+    <section class="feature pt-12 bg-gray-50">
+      <div class="container mx-auto  px-6 pb-32">
+        <div class="flex flex-col space-y-24 text-center md:flex-row md:space-y-0">
+            <div class="flex flex-col space-y-2 justify-center items-center">
+                <div class="flex flex-col space-y-3 justify-center items-center">
+                    <img src="images/icon-access-anywhere.svg" alt="" class="w-1/4 md:w-1/6 md:h-1/2">
+                    <h2 class="text-lg mt-5 font-bold md:text-xl">Access your file from anywhere</h2>
+                    <p class="text-gray-500 md:w-1/2">The ability to use smartphone,tablet, or computer  to access your 
+                        account means your files foloow you everywhere</p>
+
+                </div>
+
+                
+            </div>
+
+            <div class="flex flex-col space-y-7 justify-center items-center">
+                <img src="images/icon-security.svg" alt="" class="w-1/4 md:w-1/6 md:h-1/2">
+                <h2 class="text-lg mt-14 font-bold md:text-xl">Security you trust</h2>
+                <p class="text-gray-500 md:w-1/2">2-factor authentication or computer  to access your 
+                    account means your files foloow you everywhere</p>
+
+            </div>
+        </div>
+
+
+        <div class="flex flex-col space-y-24 text-center md:flex-row md:space-y-0 mt-24">
+            <div class="flex flex-col space-y-2 justify-center items-center">
+                <div class="flex flex-col space-y-3 justify-center items-center">
+                    <img src="images/icon-any-file.svg" alt="" class="w-1/4 md:w-1/6 md:h-1/2">
+                    <h2 class="text-lg mt-5 font-bold md:text-xl">Access your file from anywhere</h2>
+                    <p class="text-gray-500 md:w-1/2">The ability to use smartphone,tablet, or computer  to access your 
+                        account means your files foloow you everywhere</p>
+
+                </div>
+
+                
+            </div>
+
+            <div class="flex flex-col space-y-3 justify-center items-center">
+                <img src="images/icon-collaboration.svg" alt="" class="w-1/4 md:w-1/6 md:h-1/2">
+                <h2 class="text-lg mt-5 font-bold md:text-xl">Access your file from anywhere</h2>
+                <p class="text-gray-500 md:w-1/2">The ability to use smartphone,tablet, or computer  to access your 
+                    account means your files foloow you everywhere</p>
+
+            </div>
+        </div>
+      </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
